@@ -13,6 +13,7 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [HttpGet]
     public IActionResult Index()
     {
         return View();
@@ -21,6 +22,11 @@ public class HomeController : Controller
     public IActionResult Privacy()
     {
         return View();
+    }
+    [HttpPost]
+    public IActionResult Cadastro(HomeModel model) {
+        var teste = model.Nome;
+        return RedirectToAction("Index");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
