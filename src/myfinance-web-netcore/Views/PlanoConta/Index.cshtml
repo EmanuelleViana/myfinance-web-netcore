@@ -1,0 +1,60 @@
+@{
+    ViewData["Title"] = "Plano de Contas";
+}
+
+<h1>@ViewData["Title"]</h1>
+<button type="button" class="btn btn-primary btn-lg" onclick="Novo()">Criar item de Plano de Contas</button>
+<hr />
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">#</th>
+            <th scope="col">#</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in (List<PlanoContaModel>)ViewBag.ListaPlanoConta)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Tipo</td>
+                    <td><button type="button" class="btn btn-outline-info" onclick="Editar(@item.Id.ToString())">Editar</button>
+                    </td>
+                    <td><button type="button" class="btn btn-danger" onclick="Excluir(@item.Id.ToString())">Excluir</button></td>
+                </tr>
+            }
+        }
+
+        @* <tr>
+        <td>1</td>
+        <td>Teste</td>
+        Renderizar conteudo do controller na tela:
+        <td>@ViewBag.ListaPlanoConta</td>
+        <td><button type="button" class="btn btn-outline-warning">Editar</button>
+        </td>
+        <td><button type="button" class="btn btn-outline-danger">Excluir</button>
+        </td>
+        </tr> *@
+
+    </tbody>
+</table>
+
+<script>
+    function Novo() {
+        window.location.href = "../PlanoConta/Cadastro";
+    }
+
+    function Editar(id) {
+        window.location.href = "/PlanoConta/Cadastro/" + id
+
+    }
+    function Excluir(id) {
+        window.location.href = "/PlanoConta/Excluir/" + id
+    }
+</script>
