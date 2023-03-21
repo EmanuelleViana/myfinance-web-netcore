@@ -49,23 +49,27 @@ ou, para refresh em tempo real
 
 ## Plano contas
    1. Listagem
+   
       Nesta tela é possível ver todos os Planos cadastrados e ter acesso as ações para Editar, Excluir e Registrar um novo.
     ![](docs/PlanoContas.png)
 
    2. Cadastro
+   
        Contém um formulário que permite o cadastro de novo item de Plano.
       ![](docs/PlanoContas_Cadastro.png)
 
-   4. Edição
-    É possível editar os dados de um item.
+   3. Edição
+   
+       É possível editar os dados de um item.
     ![](docs/PlanoContas_Edicao.png)
-   5. Exclusão
+   4. Exclusão
+   
     A exclusão é feita através do botão de ação 'Excluir'
 
 ## Transações
    1. Listagem
-   Nesta tela é possível ver todas as Transações cadastradas e ter acesso as ações para Editar, Excluir e Registrar uma nova.
-    ![](docs/Transacoes.png)
+      Nesta tela é possível ver todas as Transações cadastradas e ter acesso as ações para Editar, Excluir e Registrar uma nova.
+      ![](docs/Transacoes.png)
 
    2. Cadastro
        Contém um formulário que permite o cadastro de novo item de Transação.
