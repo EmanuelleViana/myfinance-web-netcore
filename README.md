@@ -1,7 +1,7 @@
 # MyFinance Web
 MyFinance - Projeto do Curso de Pós-Graduação em Engenharia de Software da PUC-MG.
 
-> Este projeto faz parte do Trabalho Final da Disciplina PRÁTICAS DE IMPLEMENTAÇÃO E EVOLUÇÃO DE SOFTWARE. Consiste de um sistema web para controle de finanças pessoais, com registros de transações, receitas e despesas.
+> Este projeto faz parte do Trabalho Final da Disciplina PRÁTICAS DE IMPLEMENTAÇÃO E EVOLUÇÃO DE SOFTWARE. Consiste de um sistema web para controle de finanças pessoais, com registros de transações, receitas e despesas. Uma versão utilizando a API Logging pode ser acessada em https://github.com/EmanuelleViana/myfinance-web-dotnet-
 
 ## 💻 Requisitos
 Antes da instalação do projeto é necessário ter uma IDE como o `Visual Studio` ou `Visual Studio Code` e a instalação do `ASP.NET`, `SQL Server` e `Git`. Ver seção [Tecnologias Utilizadas](#-tecnologias-utilizadas).
