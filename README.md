@@ -68,10 +68,12 @@ ou, para refresh em tempo real
     ![](docs/Transacoes.png)
 
    2. Cadastro
+       Contém um formulário que permite o cadastro de novo item de Transação.
       ![](docs/Transacoes_Registrar.png)
 
    3. Edição
-    ![](docs/Transacoes_Editar.png)
+      É possível editar os dados de um item.
+      ![](docs/Transacoes_Editar.png)
    4. Exclusão
         A exclusão é feita através do botão 'Excluir' dentro do Modal.
 
