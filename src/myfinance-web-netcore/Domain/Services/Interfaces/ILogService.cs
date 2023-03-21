@@ -8,7 +8,7 @@ namespace myfinance_web_netcore.Domain.Services.Interfaces
 {
     public interface ILogService
     {
-        void Salvar(LogExclusaoModel logExclusaoModel);
+        void Salvar(LogsModel logsModel);
 
 
     }

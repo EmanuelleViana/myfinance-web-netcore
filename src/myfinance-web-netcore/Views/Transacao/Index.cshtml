@@ -32,8 +32,9 @@
                     <td>@item.ItemPlanoConta.Descricao</td>
                     <td><button type="button" class="btn btn-outline-info" onclick="Editar(@item.Id.ToString())">Editar</button>
                     </td>
-                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            data-bs-target="#confirmModal">Excluir</button>
+                    <td><button type="button" class="btn btn-danger delete" data-bs-toggle="modal" onclick="openModal(@item.Id)"
+                            data-bs-target="#confirmModal" data-identificador="@item.Id" data-id="@item.Id">Excluir x
+                            @item.Id</button>
 
                         <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
                             aria-hidden="true">
@@ -45,13 +46,15 @@
                                     </div>
                                     <div class="modal-body d-flex justify-content-center flex-column">
                                         <i class="bi bi-question-circle-fill text-warning text-center " style="    font-size: 36px;
-    "></i>
+            "></i>
+
+                                        <input type="hidden" id="modalTxtId" class="form-control modalTxtId" />
+
                                         <h2 class="text-dark text-center">Confirma Exclusão?</h2>
                                         <p class="text-center text-secondary">Atenção!</p>
                                     </div>
                                     <div class="modal-footer d-flex justify-content-center">
-                                        <button type="button" class="btn btn-primary"
-                                            onclick="Excluir(@item.Id)">Excluir</button>
+                                        <button type="button" class="btn btn-primary" onclick="Excluir()">Excluir</button>
                                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
 
                                     </div>
@@ -77,7 +80,17 @@
         window.location.href = "/Transacao/Cadastro/" + id
 
     }
-    function Excluir(id) {
+    function Excluir() {
+        var id = document.getElementById('modalTxtId').value;
         window.location.href = "/Transacao/Excluir/" + id
     }
+
+    function openModal(identificador) {
+        document.getElementById('modalTxtId').value = identificador;
+    }
+
+
+
 </script>
+
+

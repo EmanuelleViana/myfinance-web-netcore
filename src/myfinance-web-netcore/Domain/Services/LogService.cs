@@ -17,18 +17,18 @@ namespace myfinance_web_netcore.Domain.Services.Interfaces
             _dbContext = dbContext;
         }
 
-        public void Salvar(LogExclusaoModel logExclusaoModel)
+        public void Salvar(LogsModel logsModel)
         {
-            var dbSet = _dbContext.LogExclusao;
+            var dbSet = _dbContext.Logs;
 
-            var entidate = new LogExclusao()
+            var entidate = new Logs()
             {
-                Id = logExclusaoModel.Id,
-                Data = logExclusaoModel.Data,
-                Observacao = logExclusaoModel.Observacao,
-                Tabela = logExclusaoModel.Tabela,
-                IdRegistro = logExclusaoModel.IdRegistro,
-                Operacao = logExclusaoModel.Operacao
+                Id = logsModel.Id,
+                Data = logsModel.Data,
+                Observacao = logsModel.Observacao,
+                Tabela = logsModel.Tabela,
+                IdRegistro = logsModel.IdRegistro,
+                Operacao = logsModel.Operacao
 
             };
 

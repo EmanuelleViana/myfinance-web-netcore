@@ -97,19 +97,6 @@ namespace myfinance_web_netcore.Domain.Services.Interfaces
             _dbContext.Attach(item);
             _dbContext.Remove(item);
             _dbContext.SaveChanges();
-
-
-            //  _logger.LogInformation(CustomLoggerEntry.CreateEntry(
-            //     operacao: EventConstants.Type.Exclusao,
-            //     tabela: EventConstants.Tablename.Transacao,
-            //     observacao: JsonSerializer.Serialize(new
-            //     {
-            //         OldObject = transacao,
-            //         newObject = new { },
-            //     }),
-            //     idRegistro: id));
-
-
         }
     }
 }

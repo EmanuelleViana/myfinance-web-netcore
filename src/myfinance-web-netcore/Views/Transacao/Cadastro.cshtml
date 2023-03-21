@@ -10,7 +10,7 @@
         <div class="mb-3">
             <label class="form-label">Data</label>
             <input type="hidden" id="txtId" class="form-control" asp-for="Id" />
-            <input type="date" id="txtData" class="form-control" asp-for="Data" />
+            <input type="date" id="txtData" class="form-control" min='1899-01-01' asp-for="Data" />
         </div>
 
         <div class="mb-3">

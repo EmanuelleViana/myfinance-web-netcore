@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace myfinance_web_netcore.Domain.Entities
+namespace myfinance_web_netcore.Models
 {
-    public class LogExclusao
+    public class LogsModel
     {
         public int? Id { get; set; }
         public string? Observacao { get; set; }

@@ -79,7 +79,7 @@ public class TransacaoController : Controller
         }
 
         _logService.Salvar(
-            new LogExclusaoModel()
+            new LogsModel()
             {
                 Data = DateTime.Now,
                 Observacao = JsonSerializer.Serialize(transacao),
