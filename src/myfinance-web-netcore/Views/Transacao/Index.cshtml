@@ -33,8 +33,8 @@
                     <td><button type="button" class="btn btn-outline-info" onclick="Editar(@item.Id.ToString())">Editar</button>
                     </td>
                     <td><button type="button" class="btn btn-danger delete" data-bs-toggle="modal" onclick="openModal(@item.Id)"
-                            data-bs-target="#confirmModal" data-identificador="@item.Id" data-id="@item.Id">Excluir x
-                            @item.Id</button>
+                            data-bs-target="#confirmModal" data-identificador="@item.Id" data-id="@item.Id">Excluir
+                        </button>
 
                         <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
                             aria-hidden="true">
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="modal-body d-flex justify-content-center flex-column">
                                         <i class="bi bi-question-circle-fill text-warning text-center " style="    font-size: 36px;
-            "></i>
+                "></i>
 
                                         <input type="hidden" id="modalTxtId" class="form-control modalTxtId" />
 

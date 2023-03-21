@@ -4,7 +4,9 @@ MyFinance - Projeto do Curso de Pós-Graduação em Engenharia de Software da PU
 > Este projeto faz parte do Trabalho Final da Disciplina PRÁTICAS DE IMPLEMENTAÇÃO E EVOLUÇÃO DE SOFTWARE. Consiste de um sistema web para controle de finanças pessoais, com registros de transações, receitas e despesas.
 
 ## 💻 Requisitos
-Antes da instalação do projeto é necessário ter uma IDE como o `Visual Studio` ou `Visual Studio Code`.
+Antes da instalação do projeto é necessário ter uma IDE como o `Visual Studio` ou `Visual Studio Code` e a instalação do `ASP.NET`, `SQL Server` e `Git`. Ver seção [Tecnologias Utilizadas](#-tecnologias-utilizadas).
+
+Após a instalação dessas ferramentas executar os scripts [myfinance_script](docs/myfinance_script.sql)  e [featureextra](docs/featureextra.sql).
 
 ## 💻 Tecnologias utilizadas
 As principais tecnologias utilizadas foram:
@@ -26,7 +28,7 @@ Para a instalação do projeto seguir os passos:
   cd .\myfinance-web-netcore\src\myfinance-web-netcore\ 
 ```
 
-1. Executar 
+3. Executar 
 ```bash
   dotnet run 
 ```
@@ -36,15 +38,49 @@ ou, para refresh em tempo real
   dotnet watch
 ```
 
+4. Acessar pelo browser 
+   https://localhost:7108
+
 
 # DER - Diagrama de Entidades e Relacionamento
-<img src="../myfinance-web-netcore/docs/DER.png">
+   ![](docs/DER.png)
 
 # Resultados e Funcionalidades
 
-1. Plano contas
-   DESCREVER R COLOCAR PRINT
-2. TRANSAÇÕES
-   DESCREVER E COLOCAR PRINT
+## Plano contas
+   1. Listagem
+      Nesta tela é possível ver todos os Planos cadastrados e ter acesso as ações para Editar, Excluir e Registrar um novo.
+    ![](docs/PlanoContas.png)
+
+   2. Cadastro
+       Contém um formulário que permite o cadastro de novo item de Plano.
+      ![](docs/PlanoContas_Cadastro.png)
+
+   4. Edição
+    É possível editar os dados de um item.
+    ![](docs/PlanoContas_Edicao.png)
+   5. Exclusão
+    A exclusão é feita através do botão de ação 'Excluir'
+
+## Transações
+   1. Listagem
+   Nesta tela é possível ver todas as Transações cadastradas e ter acesso as ações para Editar, Excluir e Registrar uma nova.
+    ![](docs/Transacoes.png)
+
+   2. Cadastro
+      ![](docs/Transacoes_Registrar.png)
+
+   3. Edição
+    ![](docs/Transacoes_Editar.png)
+   4. Exclusão
+        A exclusão é feita através do botão 'Excluir' dentro do Modal.
 
 
+   5. **Modal de Confirmação - Feature Extra**
+   Popup que o pergunta sempre que se tentar realizar a exclusão de registros de transação. A exclusão desse     registro gera um log numa tabela do banco de dados modelado com as seguintes colunas: id, data, operação (I – Inclusão, A – Alteração ou E – Exclusão), observação, tabela, id_registro)
+    ![](docs/FeatureExtra.png)
+
+
+*Exemplo de log:*
+
+![](docs/logs.png)
