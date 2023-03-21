@@ -32,7 +32,32 @@
                     <td>@item.ItemPlanoConta.Descricao</td>
                     <td><button type="button" class="btn btn-outline-info" onclick="Editar(@item.Id.ToString())">Editar</button>
                     </td>
-                    <td><button type="button" class="btn btn-danger" onclick="Excluir(@item.Id.ToString())">Excluir</button>
+                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            data-bs-target="#confirmModal">Excluir</button>
+
+                        <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog  modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body d-flex justify-content-center flex-column">
+                                        <i class="bi bi-question-circle-fill text-warning text-center " style="    font-size: 36px;
+    "></i>
+                                        <h2 class="text-dark text-center">Confirma Exclusão?</h2>
+                                        <p class="text-center text-secondary">Atenção!</p>
+                                    </div>
+                                    <div class="modal-footer d-flex justify-content-center">
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="Excluir(@item.Id.ToString())">Excluir</button>
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>
             }
@@ -40,6 +65,8 @@
 
     </tbody>
 </table>
+
+
 
 <script>
     function Novo() {

@@ -33,7 +33,7 @@ Para a instalação do projeto seguir os passos:
 
 ou, para refresh em tempo real 
 ```bash
-  dotnet run watch
+  dotnet watch
 ```
 
 
