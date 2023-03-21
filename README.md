@@ -50,7 +50,7 @@ ou, para refresh em tempo real
 ## Plano contas
    1. Listagem
    
-      Nesta tela é possível ver todos os Planos cadastrados e ter acesso as ações para Editar, Excluir e Registrar um novo.
+        Nesta tela é possível ver todos os Planos cadastrados e ter acesso as ações para Editar, Excluir e Registrar um novo.
     ![](docs/PlanoContas.png)
 
    2. Cadastro
@@ -63,30 +63,37 @@ ou, para refresh em tempo real
        É possível editar os dados de um item.
     ![](docs/PlanoContas_Edicao.png)
    4. Exclusão
-   
-    A exclusão é feita através do botão de ação 'Excluir'
+    <p>A exclusão é feita através do botão de ação 'Excluir'</p>
 
 ## Transações
    1. Listagem
-      Nesta tela é possível ver todas as Transações cadastradas e ter acesso as ações para Editar, Excluir e Registrar uma nova.
-      ![](docs/Transacoes.png)
+        <p>Nesta tela é possível ver todas as Transações cadastradas e ter acesso as ações para Editar, Excluir e Registrar uma nova.<p>
+        
+        ![](docs/Transacoes.png)
 
    2. Cadastro
-       Contém um formulário que permite o cadastro de novo item de Transação.
+      <p> Contém um formulário que permite o cadastro de novo item de Transação.</p>
+      
       ![](docs/Transacoes_Registrar.png)
 
    3. Edição
-      É possível editar os dados de um item.
-      ![](docs/Transacoes_Editar.png)
+      <p>É possível editar os dados de um item.</p>
+     
+       ![](docs/Transacoes_Editar.png)
    4. Exclusão
-        A exclusão é feita através do botão 'Excluir' dentro do Modal.
+       <p>A exclusão é feita através do botão 'Excluir' dentro do Modal.</p>
 
 
    5. **Modal de Confirmação - Feature Extra**
-   Popup que o pergunta sempre que se tentar realizar a exclusão de registros de transação. A exclusão desse     registro gera um log numa tabela do banco de dados modelado com as seguintes colunas: id, data, operação (I – Inclusão, A – Alteração ou E – Exclusão), observação, tabela, id_registro)
-    ![](docs/FeatureExtra.png)
-
+   <p>Popup que o pergunta sempre que se tentar realizar a exclusão de registros de transação. A exclusão desse     registro gera um log numa tabela do banco de dados modelado com as seguintes colunas: id, data, operação (I – Inclusão, A – Alteração ou E – Exclusão), observação, tabela, id_registro)</p>
+  
+  ![](docs/FeatureExtra.png)
 
 *Exemplo de log:*
 
 ![](docs/logs.png)
+
+
+<hr> 
+
+🍜 Práticas de Implementação e Evolução de Software - 2023 
