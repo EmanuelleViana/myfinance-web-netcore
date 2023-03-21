@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<MyFinanceDbContext>();
 builder.Services.AddScoped<IPlanoContaService,PlanoContaService>();
+builder.Services.AddScoped<ITransacaoService,TransacaoService>();
 
 
 var app = builder.Build();

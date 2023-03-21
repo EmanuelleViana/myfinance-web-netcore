@@ -19,7 +19,7 @@
         </div>
         <div class="mb-3">
             <label class="form-label">Plano Conta</label>
-            @* @Html.DropDownListFor(m => m.PlanoContaId, Model.PlanoContas, new { @class="form-select"}) *@
+            @Html.DropDownListFor(m => m.PlanoContaId, Model.PlanoContas, new { @class="form-select"})
         </div>
         <div class="mb-3">
             <label class="form-label">Histórico</label>
@@ -38,6 +38,6 @@
 
 <script>
     function Cancelar() {
-        window.location.href = "../Transacao/Index";
+        window.location.href = "/Transacao/Index";
     }
 </script>
