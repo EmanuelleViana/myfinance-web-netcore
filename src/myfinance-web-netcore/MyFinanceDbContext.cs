@@ -12,6 +12,8 @@ namespace myfinance_web_netcore
         // mapea entidades como tabelas do banco
         public DbSet<PlanoConta> PlanoConta { get; set; }
         public DbSet<Transacao> Transacao { get; set; }
+        public DbSet<LogExclusao> LogExclusao { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,7 +24,7 @@ namespace myfinance_web_netcore
             optionsBuilder.UseSqlServer(connectionString);
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
         }

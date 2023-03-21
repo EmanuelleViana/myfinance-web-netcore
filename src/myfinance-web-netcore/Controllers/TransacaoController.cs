@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using myfinance_web_dotnet.Utils;
 using myfinance_web_netcore.Domain.Services.Interfaces;
 using myfinance_web_netcore.Models;
 
@@ -12,13 +14,16 @@ public class TransacaoController : Controller
     private readonly ILogger<TransacaoController> _logger;
     private readonly IPlanoContaService _planoContaService;
     private readonly ITransacaoService _transacaoService;
+    private readonly ILogService _logService;
 
 
-    public TransacaoController(ILogger<TransacaoController> logger, ITransacaoService transacaoService, IPlanoContaService planoContaService)
+    public TransacaoController(ILogger<TransacaoController> logger, ITransacaoService transacaoService, ILogService logService
+, IPlanoContaService planoContaService)
     {
         _logger = logger;
         _planoContaService = planoContaService;
         _transacaoService = transacaoService;
+        _logService = logService;
 
     }
 
@@ -66,7 +71,23 @@ public class TransacaoController : Controller
     [Route("Excluir/{id}")]
     public IActionResult Excluir(int id)
     {
-        _transacaoService.Excluir(id);
+        var transacao = _transacaoService.RetornaRegistro(id);
+
+        if (transacao != null)
+        {
+            _transacaoService.Excluir(id);
+        }
+
+        _logService.Salvar(
+            new LogExclusaoModel()
+            {
+                Data = DateTime.Now,
+                Observacao = JsonSerializer.Serialize(transacao),
+                Tabela = Constantes.Tabela.Transacao,
+                IdRegistro = id,
+                Operacao = Constantes.TipoOperacao.Exclusao
+            }
+        );
 
         return RedirectToAction("index");
     }
